@@ -27,7 +27,7 @@
     }
 
     if($userName=="Ryan" && $passWord="test") {
-        header("Location: http://forums.local/form.html");
+        header("Location: http://tuckShop.local/form.html");
         $passWord=NULL;
         $userName=NULL;
         exit();
@@ -35,7 +35,7 @@
     else {
         $passWord=NULL;
         $userName=NULL;
-        header("Location: http://forums.local/login.html");
+        header("Location: http://tuckShop.local/login.html");
         exit();
     }
 
