@@ -19,25 +19,42 @@
         echo '<p class = "error">You forgot to enter your name!</p>';
     }
 
-    if(!empty($_REQUEST['passWord'])) {
-        $passWord = $_REQUEST['passWord'];
+    //Parses full name into first and last name
+    $spacePosition= strpos("$userName", " ");
+    $firstName=substr($userName, 0, $spacePosition);
+    $lastName=substr($userName, $spacePosition, strlen($userName));
+
+    //Logic to decide whether to remember user or not
+    if(isset($_REQUEST['rememberUser'])) {
+
+        $rememberUser = $_REQUEST['rememberUser'];
+
+        if ($rememberUser == 'Yes') {
+            $remember = true;
+        } elseif ($rememberUser=='No') {
+            $remember = false;
+        } else {
+            //If someone somehow puts in a value other than yes or no, default remember to false
+            $remember = false;
+            echo '<p class="error">Gender should be either "M" or "F"!</p>';
+        }
     } else {
-        $passWord = NULL;
-        echo '<p class = "error">You forgot...</p>';
+        //If no value is selected default to false
+        $remember = false;
     }
 
-    if($userName=="Ryan" && $passWord="test") {
+    if($remember==true && $userName!=NULL) {
         header("Location: http://tuckShop.local/form.html");
-        $passWord=NULL;
+        exit();
+    }
+    else if($remember==false && $userName!=NULL) {
         $userName=NULL;
+        header("Location: http://tuckShop.local/form.html");
         exit();
     }
     else {
-        $passWord=NULL;
-        $userName=NULL;
         header("Location: http://tuckShop.local/login.html");
         exit();
     }
-
 ?>
 </body>

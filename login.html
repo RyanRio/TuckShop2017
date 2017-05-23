@@ -26,12 +26,15 @@
     </style>
     <form action="handle_login.php" method="POST">
     <fieldset>
-        <p><label class="loginItems">Username: <input type="text"
+        <p><label class="loginItems">First Name, Last Name: <input type="text"
         name="userName" class="loginItems" />
         </label></p>
 
-        <p><label class="loginItems">Password: <input type="text" 
-        name="passWord" class="loginItems" /></label></p>
+        <p class=loginItems><label for="rememberUser">Remember User Name: 
+        </label><input type="radio"
+        name="rememberUser" value="Yes" /> Yes
+        <input type="radio" name=
+        "rememberUser" value="No" /> No</p>
     </fieldset>
         <p align="center" > <input type="submit" class="login" name="submit" value="Login" /></p>
     </form>
