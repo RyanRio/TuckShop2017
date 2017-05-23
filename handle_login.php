@@ -6,10 +6,6 @@
 </head>
 <body>
 <style>
-    label {
-        font-weight: bold;
-        color: #300ACC;
-    }
     .error {
         font-weight: bold;
         color: #C00;
