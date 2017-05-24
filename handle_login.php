@@ -44,16 +44,16 @@
     }
 
     if($remember==true && $userName!=NULL) {
-        header("Location: http://tuckShop.local/form.html");
+        header("Location: http://tuckShop.local/HomePage.html");
         exit();
     }
     else if($remember==false && $userName!=NULL) {
         $userName=NULL;
-        header("Location: http://tuckShop.local/form.html");
+        header("Location: http://tuckShop.local/HomePage.html");
         exit();
     }
     else {
-        header("Location: http://tuckShop.local/login.html");
+        header("Location: http://tuckShop.local");
         exit();
     }
 ?>

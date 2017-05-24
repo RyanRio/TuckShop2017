@@ -8,38 +8,42 @@ lang="en">
 <meta http-equiv="Content-Type"
  content="text/html;
 charset=utf-8" />
-<title>Simple HTML Form</title>
+<title>TuckShop Website</title>
 <style type="text/css"
-title="text/css" media="all">
-label {
- font-weight: bold;
- color: #300ACC;
-}
+    title="text/css" media="all">
+    label {
+    font-weight: bold;
+    color: #300ACC;
+    border:none;
+    }
+    .header {
+        display:flex;
+        align-content: center;
+        justify-content: center;
+    }
 </style>
 </head>
 <body>
+
+<p align="center">Welcome to the TuckShop Website!</p>
 <!-- Script 2.1 - form.html -->
+<form action="handle_form.php" method="post" >
 
-<form action="handle_form.php" method="post">
-    <fieldset><legend>Enter your information
-        in the form below:
-        </legend>
+    <p  ><label class="header">Name: <input type="text"
+    name="name" size="20" maxlength="40" />
+    </label></p>
 
-        <p><label>Name: <input type="text"
-        name="name" size="20" maxlength="40" />
-        </label></p>
+    <p><label class="header">Email Address: <input type="text"
+    name="email" size="40" maxlength="60" /></label></p>
 
-        <p><label>Email Address: <input type="text"
-        name="email" size="40" maxlength="60" /></label></p>
-
-        <p><label for="gender">Gender:
+    <p align="center"><label class="header" for="gender">Gender:
     </label><input type="radio"
     name="gender" value="M" /> Male
     <input type="radio" name=
     "gender" value="F" /> Female</p>
 
-    <p><label>Age:
-    <select name="age">
+    <p><label class="header">Age:
+    <select class="header" name="age">
     <option value="0-29">Under 30
     </option>
     <option value="30-60">Between
@@ -48,11 +52,10 @@ label {
     </option>
     </select></label></p>
 
-    <p><label>Comments: <textarea
+    <p><label class="header">Comments: <textarea
     name="comments" rows="3"
      cols="40"></textarea></label></p>
 
-    </fieldset>
     <p align="center"><input type = 
     "submit" name = "submit" value = 
     "Sumbit My Information" /></p>
