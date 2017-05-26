@@ -39,7 +39,7 @@ Now to update:
     git checkout master
     git merge upstream/master
 
-This updates your local folder, so now update your online folder:
+This updates your local folder, so now update your online folder (After reviewing the changes of your local version!):
 
     git push origin master
 
