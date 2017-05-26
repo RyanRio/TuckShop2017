@@ -53,6 +53,10 @@ function check_login($dbc, $email = '', $password = '') {
             //fetch record
             $row = mysqli_fetch_array ($r, MYSQLI_ASSOC);
             return array(true, $row);
-        } else 
+        } else { //no match
+            $errors[] = 'The email address and password entered do not match those on the file.';
+        }
     }
+
+    return array(false, $errors);
 } 
