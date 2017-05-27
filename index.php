@@ -1,6 +1,6 @@
     <?php 
     $page_title = 'Login';
-    include('/header.html');
+    include('includes/header.html');
 
     if (isset($errors) && !empty($errors)) {
         echo '<h1>Error!</h1>
@@ -66,5 +66,5 @@
         </form>
 
     <?php
-    include ('/footer.html');
+    include ('includes/footer.html');
     ?>
