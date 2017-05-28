@@ -26,7 +26,7 @@ function redirect_user ($page = 'index.php') {
 //The function returns an array of the information including
 //a true/false variable indicating success
 
-function check_login($dbc, $email = '', $password = '') {
+function check_login($dbc, $email, $password) {
 
     $errors = array(); //init error array
 

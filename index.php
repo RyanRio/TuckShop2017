@@ -14,7 +14,7 @@
     
     
     //Check for form submission
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    /*if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         //Simple validation of both username and password at the same time
         if (!empty($_REQUEST['email']) && !empty($_REQUEST['psw'])) {
@@ -33,7 +33,7 @@
             //header('Location: C:/xampp/htdocs/Tucktogo/form.html');
             echo "<p> Thank you for logging in! You are now being redirected.</p>";
         }
-    }
+    }*/
     ?>
 
         <h1>Welcome to Tuck to Go</h1>
@@ -50,7 +50,7 @@
                     <label><b>Email Address:</b></label></br>
                     <input type="text" placeholder="Enter email address" name="email" size="20" maxlength="60" required/><br/>                    
                     <label><b>Password:</b></label><br/>
-                    <input type="password" placeholder="Enter Password" name="psw" required/><br/>
+                    <input type="password" placeholder="Enter Password" name="password" required/><br/>
                     <input type="checkbox" checked="checked"> Remember me <br/>
                     <p><input type="submit" name="submit" value="Login" /></p>
 
