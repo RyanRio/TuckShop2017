@@ -45,11 +45,11 @@ function check_login($dbc, $email, $password) {
 
     if (empty($errors)) { //if all is gud
         
-        $q = "SELECT user_id, first_name, last_name, phone_number FROM users WHERE email='$e' AND pass=SHA1('$p')"; 
-        $result = @mysqli_query ($dbc, $q);  
+        $q = "SELECT user_id, first_name, last_name FROM users WHERE email='$e' AND pass=SHA1('$p')"; 
+        $r = @mysqli_query ($dbc, $q);  
 
         //check result
-        if (mysqli_num_rows($result) == 1) {
+        if ($r) {
             //fetch record
             $row = mysqli_fetch_array ($r, MYSQLI_ASSOC);
             return array(true, $row);
