@@ -53,9 +53,6 @@
                     <input type="password" placeholder="Enter Password" name="password" required/><br/>
                     <input type="checkbox" checked="checked"> Remember me <br/>
                     <p><input type="submit" name="submit" value="Login" /></p>
-                    <form action="localhost/Tucktogo/register.php">
-                        <p><input type="button" name="new_user" value="Create a New User"
-                    </form>
 
 
                     <!-- In case a new user option is necessary:

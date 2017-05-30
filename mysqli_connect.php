@@ -2,7 +2,7 @@
 
 DEFINE ('DB_USER', 'username'); //put in a shared username
 DEFINE ('DB_PASSWORD', 'password'); //put in a shared password
-DEFINE ('DB_HOST', 'localhost');
+DEFINE ('DB_HOST', 'tuckshop.local');
 DEFINE ('DB_NAME', 'tucktogo'); //sitename is name of dataabase by convention
 
 //Make the connection

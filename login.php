@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         setcookie ('user_id', $data['user_id']);
         redirect_user('loggedin.php');
     } else {
-        $errors = $data;
+        $errors = ["CHECK DOES NOT EXIST"];
     }
 
     mysqli_close($dbc);

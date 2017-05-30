@@ -40,6 +40,7 @@
             //make the query
             $q = "INSERT INTO users (first_name, last_name, email, pass, registration_date) VALUES ('$fn', '$ln', '$e', 'SHA1('$p'), NOW() )";
             $r = @mysqli_query ($dbc, $q);
+            echo $r;
             if ($r) {
                 echo '<h1>Thank you!</h1>
                 <p>You are now registered.</p><p><br /></p>';

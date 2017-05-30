@@ -50,6 +50,7 @@ function check_login($dbc, $email, $password) {
 
         //check result
         if ($r) {
+            $errors[]='R does exist';
             //fetch record
             $row = mysqli_fetch_array ($r, MYSQLI_ASSOC);
             return array(true, $row);
